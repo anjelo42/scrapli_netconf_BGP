@@ -48,11 +48,11 @@
                                 </address-family>
           {% endfor %}
                         </bgp>
-					<router-ospf	
-                        <ospf
+		<router-ospf
+			<ospf
                                 xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ospf">
-							<process-id	
-                                <id>{{ host.facts.ospf.process_id }}</id>
+			<process-id
+				<id>{{ host.facts.ospf.process_id }}</id>
                                 <router-id>{{ host.facts.ospf.rid }}</router-id>
           {% for n in host.facts.ospf.networks %}
                                 <network>
@@ -62,9 +62,9 @@
                                 </network>
 								
           {% endfor %}
-					</router-ospf>
-                        </ospf>
-							</process-id>
+	  	</router-ospf>
+			</ospf>
+			</process-id>
                 </router>
         </native>
 </config>
